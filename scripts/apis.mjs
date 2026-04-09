@@ -1,0 +1,3 @@
+export const EXCHANGE_RATE_KEY = '8fe788923ba944ab26f00807';
+export const COINMARKETCAP_KEY = '186136f23aa648fc9cac95b565dae69a';
+export const OPENWEATHER_KEY = '8805282e5e65479e7e8a9457544d5dfa';

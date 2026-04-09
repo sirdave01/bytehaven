@@ -86,7 +86,7 @@
         rel="stylesheet">
 
     <!-- link for the styles  and scripts-->
-    <script src="scripts/base.mjs" defer></script>
+    <script type="module" src="scripts/base.mjs"></script>
 
     <link rel="stylesheet" href="styles/base.css">
 
@@ -164,8 +164,22 @@
             <h2>Certification</h2>
         
             <img src="images/cac_cert_bhts.webp" alt="Certification from CAC" loading="lazy">
-        
+
         </section>
+
+        <!-- MAIN MODAL (add this before </body>) -->
+
+        <dialog id="main-modal">
+
+            <div class="modal-content">
+
+                <button id="close-modal" class="close-btn">✕</button>
+
+                <div id="modal-body"></div>
+
+            </div>
+
+        </dialog>
         
         <section class="live-data card">
         
@@ -190,7 +204,7 @@
                 <div id="current-weather"></div>
         
                 <div id="forecast" class="card">
-                    
+
                     <p>Loading Weather Update...</p>
 
                 </div>
