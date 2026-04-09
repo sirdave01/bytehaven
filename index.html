@@ -75,39 +75,202 @@
 
     <meta name="theme-color" content="#10b981">
 
+    <!-- link for the fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital@1&display=swap"
+        rel="stylesheet">
+
+    <!-- link for the styles  and scripts-->
+    <script src="scripts/base.mjs" defer></script>
+
+    <link rel="stylesheet" href="styles/base.css">
+
 </head>
 
 <body>
-    <main>
 
+    <a href="#main-content" class="skip-link">Skip to main Content</a>
 
+    <header>
+
+        <img src="images/bytehavenSmall_logo.webp" alt="ByteHaven Logo" width="16" height="16">
+
+        <span>
+
+            ByteHaven Tech Solutions Ltd
+
+        </span>
         
-    </main>
+        <button id="nav-btn" class="hamburger"></button>
+        
+        <button id="dark-mode-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+
+    </header>
     
-    <!-- Hero section -->
-     <section class="section hero">
-        <div class="container"></div>
-     </section>
 
-    <!-- About Section -->
-     <section id="about" class="section">
-        <div class="container"></div>
-     </section>
+        <!-- this is the main content area of the website
+         it will contain the Hero sections, about us, founder, products section, contact, roadmap, etc
+         while the Hero Section is displayed in full, the rest will be displayed as clickable modals
+         in the nav element -->
 
-    <!-- Founder's Section -->
-     <section id="founder" class="section">
-        <div class="container"></div>
-     </section>
+    <nav id="nav-list" class="nav-bar">
+    
+        <ul>
 
-    <!-- Products Section -->
-     <section id="products" class="section">
-        <div class="container"></div>
-     </section>
+            <li><a href="#" data-modal="about">About Us</a></li>
 
-    <!-- Contact Section -->
-     <section id="contact" class="section">
-        <div class="container"></div>
-     </section>
+            <li><a href="#" data-modal="founder">Founder</a></li>
+
+            <li><a href="#" data-modal="products">Products</a></li>
+
+            <li><a href="#" data-modal="roadmap">Roadmap</a></li>
+
+            <li><a href="#" data-modal="contact">Contact</a></li>
+
+        </ul>
+    
+    </nav>
+
+    <main id="main-content">
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <img src="images/byteHaven_logo.webp" alt="ByteHaven Logo" class="hero-logo">
+
+                <h1>ByteHaven Tech Solutions Ltd</h1>
+
+                <p class="tagline">Building Africa's Digital Future</p>
+
+                <p class="description">
+
+                    Creating a complete ecosystem powered by <strong>Promkel (PMK)</strong> — our official utility token.
+                </p>
+
+                <button id="explore-btn" class="btn-primary">Explore Our Products</button>
+
+            </div>
+
+        </section>
+
+        <section class="certificate card">
+        
+            <h2>Certification</h2>
+        
+            <img src="images/cac_cert_bhts.webp" alt="Certification from CAC" loading="lazy">
+        
+        </section>
+        
+        <section class="live-data card">
+        
+            <h2>Live Tech Demo</h2>
+        
+            <div class="grid ">
+        
+                <div id="crypto-prices">
+        
+                    <p>Loading crypto prices...</p>
+        
+                </div>
+        
+                <div id="usd-ngn">
+        
+                    <h3>USD → NGN Rate</h3>
+        
+                    <p>Loading exchange rate...</p>
+        
+                </div>
+        
+                <div id="current-weather"></div>
+        
+                <div id="forecast" class="card">
+                    
+                    <p>Loading Weather Update...</p>
+
+                </div>
+
+    </main>
+
+    <footer>
+    
+        <div id="bytehaven-digital">
+    
+            <h3>ByteHaven Tech Solutions Ltd</h3>
+    
+            <p>Building Africa's Digital Future</p>
+    
+            <p><img src="images/icons/location.svg" alt="location icon"> Aba, Abia State, Nigeria</p>
+    
+            <p><img src="images/icons/email.svg" alt="email icon"><a
+                    href="mailto:d08178084956@gmail?subject=Inquiry%20Website&body=Hello,%20I%20have%20a%20question%20about..."
+                    target="_blank">Email Us</a>
+            </p>
+    
+        </div>
+    
+        <div id="quick-links">
+    
+            <h3>Quick Links</h3>
+    
+            <li><a href="#" data-modal="about">About Us</a></li>
+            
+            <li><a href="#" data-modal="founder">Founder</a></li>
+            
+            <li><a href="#" data-modal="products">Products</a></li>
+            
+            <li><a href="#" data-modal="roadmap">Roadmap</a></li>
+            
+            <li><a href="#" data-modal="contact">Contact</a></li>
+
+    
+        </div>
+    
+        <div id="socials">
+    
+            <h3>Socials</h3>
+    
+            <a href="https://github.com/sirdave01/" target="_blank"><img src="images/github.svg" alt="github"
+                    width="16" height="16" loading="lazy"></a>
+    
+            <a href="https://www.linkedin.com/in/caleb-osigwe-294085253/" target="_blank"><img src="images/linkedin.svg"
+                    alt="linkedin" width="16" height="16" loading="lazy"></a>
+    
+            <a href="https://wa.me/+2349035677967" target="_blank"><img src="images/whatsapp.svg" alt="whatsapp" width="16"
+                    height="16" loading="lazy"></a>
+    
+        </div>
+    
+        <hr>
+    
+        <div id="live-clock"></div>
+    
+        <div id="year-date">
+    
+            <p>
+                Live data powered by
+                <a href="https://openweathermap.org" target="_blank" rel="noopener">OpenWeather</a>,
+                <a href="https://www.coingecko.com/" target="_blank" rel="noopener">CoinGecko</a> &
+                <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener">ExchangeRate-API</a>
+            </p>
+    
+            <p>• <a href="https://youtu.be/WtkcyyMBmLw">YouTube Video</a></p>
+    
+            <p>
+                &copy; <span id="currentyear"></span>
+                ByteHaven Tech Solutions Ltd Development Team
+            </p>
+    
+            <p><span id="lastModified"></span></p>
+    
+        </div>
+    
+    </footer>
 
 </body>
 </html>
