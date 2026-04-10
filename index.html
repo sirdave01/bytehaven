@@ -115,26 +115,8 @@
 
         <!-- this is the main content area of the website
          it will contain the Hero sections, about us, founder, products section, contact, roadmap, etc
-         while the Hero Section is displayed in full, the rest will be displayed as clickable modals
-         in the nav element -->
-
-    <nav id="nav-list" class="nav-bar">
+         while the Hero Section is displayed in full, the rest will be displayed as clickable modals -->
     
-        <ul>
-
-            <li><a href="#" data-modal="about">About Us</a></li>
-
-            <li><a href="#" data-modal="founder">Founder</a></li>
-
-            <li><a href="#" data-modal="products">Products</a></li>
-
-            <li><a href="#" data-modal="roadmap">Roadmap</a></li>
-
-            <li><a href="#" data-modal="contact">Contact</a></li>
-
-        </ul>
-    
-    </nav>
 
     <main id="main-content">
 
@@ -167,23 +149,25 @@
 
         </section>
 
-        <!-- MAIN MODAL (add this before </body>) -->
+        <section>
 
-        <dialog id="main-modal">
-
-            <div class="modal-content">
-
-                <button id="close-modal" class="close-btn">✕</button>
-
-                <div id="modal-body"></div>
-
-            </div>
-
-        </dialog>
+            <h2>Know about us</h2>
+        
+            <button id="about">About Us</button>
+        
+            <button id="founder">Founder</button>
+        
+            <button id="products">Products</button>
+        
+            <button id="roadmap">Roadmap</button>
+        
+            <button id="contact">Contact</button>
+        
+        </section>
         
         <section class="live-data card">
         
-            <h2>Live Tech Demo</h2>
+            <h2>Live Crypto and Exchange Rates</h2>
         
             <div class="grid ">
         
@@ -226,16 +210,18 @@
     
             <h3>Quick Links</h3>
     
-            <li><a href="#" data-modal="about">About Us</a></li>
+                    
+            <button id="about">About Us</button>
             
-            <li><a href="#" data-modal="founder">Founder</a></li>
+            <button id="founder">Founder</button>
             
-            <li><a href="#" data-modal="products">Products</a></li>
+            <button id="products">Products</button>
             
-            <li><a href="#" data-modal="roadmap">Roadmap</a></li>
+            <button id="roadmap">Roadmap</button>
             
-            <li><a href="#" data-modal="contact">Contact</a></li>
-
+            <button id="contact">Contact</button>
+            
+            
     
         </div>
     
@@ -265,8 +251,6 @@
                 <a href="https://www.coingecko.com/" target="_blank" rel="noopener">CoinGecko</a> &
                 <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener">ExchangeRate-API</a>
             </p>
-    
-            <p>• <a href="https://youtu.be/WtkcyyMBmLw">YouTube Video</a></p>
     
             <p>
                 &copy; <span id="currentyear"></span>
