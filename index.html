@@ -149,19 +149,24 @@
 
         </section>
 
-        <section>
+        <section class="content-container">
 
             <h2>Know about us</h2>
         
-            <button id="about">About Us</button>
-        
-            <button id="founder">Founder</button>
-        
-            <button id="products">Products</button>
-        
-            <button id="roadmap">Roadmap</button>
-        
-            <button id="contact">Contact</button>
+            <div class="filterButtons">
+
+                <button id="about">About Us</button>
+                
+                <button id="founder">Founder</button>
+                
+                <button id="products">Products</button>
+                
+                <button id="roadmap">Roadmap</button>
+                
+                <button id="contact">Contact</button>
+
+            </div>
+            
         
         </section>
         
@@ -198,30 +203,6 @@
             <p>Building Africa's Digital Future</p>
     
             <p><img src="images/icons/location.svg" alt="location icon"> Aba, Abia State, Nigeria</p>
-    
-            <p><img src="images/icons/email.svg" alt="email icon"><a
-                    href="mailto:d08178084956@gmail?subject=Inquiry%20Website&body=Hello,%20I%20have%20a%20question%20about..."
-                    target="_blank">Email Us</a>
-            </p>
-    
-        </div>
-    
-        <div id="quick-links">
-    
-            <h3>Quick Links</h3>
-    
-                    
-            <button id="about">About Us</button>
-            
-            <button id="founder">Founder</button>
-            
-            <button id="products">Products</button>
-            
-            <button id="roadmap">Roadmap</button>
-            
-            <button id="contact">Contact</button>
-            
-            
     
         </div>
     
@@ -262,6 +243,24 @@
         </div>
     
     </footer>
+
+    <!-- MODAL CONTAINER -->
+
+    <dialog id="info-modal" class="modal">
+
+        <div class="modal-content">
+
+            <!-- Close button -->
+
+            <button id="close-modal" class="close-btn" aria-label="Close modal">❌</button>
+    
+            <!-- This is where renderProducts(), renderRoadmap(), etc. will be injected -->
+
+            <div id="modal-body"></div>
+
+        </div>
+
+    </dialog>
 
 </body>
 </html>

@@ -8,10 +8,151 @@
 //     including the launch dates and the features that will be included in each product.
 //     and also have a contact section that will allow users to get in touch with us if they have any questions or ideas.
 
-const productsData
+const productsData = [
+    {
+        name: 'HavenSocial',
+        description: 'Next-generation social platform powered by PMK.',
+        logo: 'images/havensocial_logo.webp',
+        ready: false
+    },
+    {
+        name: 'KelSwap',
+        description: 'Internal DEX for seamless PMK ↔ SOL swaps.',
+        logo: 'images/kelswap_logo.webp',
+        ready: false
+    },
+    {
+        name: 'HavenChat',
+        description: 'Secure messaging platform.',
+        logo: 'images/havenchat_logo.webp',
+        ready: false
+    },
+    {
+        name: 'HavenPlay',
+        description: 'A Social Video/Audio Platform.',
+        logo: 'images/havenplay_logo.webp',
+        ready: false
+    },
+    {
+        name: 'HavenBook',
+        description: 'A Hotel/Flight booking platform.',
+        logo: 'images/havenbook_logo.webp',
+        ready: false
+    },
+    {
+        name: 'HavenConverter',
+        description: 'A multimedia file converter.',
+        logo: 'images/havenConverter_logo.webp',
+            ready: false
+    },
+    {
+        name: 'Promkel (PMK) token',
+        description: 'Our official utility token.',
+        logo: 'images/pmk_logo.webp',
+        ready: false
+    }
+];
 
-const roadMapData
+const roadmapData = [
+    { quarter: 'Q3 2026', desc: 'PMK Token Launch + Internal Testing + KelSwap', ready: false },
+    { quarter: 'Q4 2026', desc: 'Beta launch of HavenSocial', ready: false },
+    { quarter: '2027', desc: 'Beta launch of HavenChat', ready: false },
+    { quarter: '2027', desc: 'Public Mainnet + DEX/CEX listings', ready: false },
+    {quarter: '2028', desc: 'Beta launch of HavenPlay', ready: false },
+    {quarter: '2028', desc: 'Beta launch of HavenBook', ready: false },
+    { quarter: 'Q4 2026', desc: 'Beta launch of HavenConverter', ready: false },
+    { quarter: 'Coming Soon!', desc: 'Other Products will be updated later', ready: false }
+];
 
+// the render function for the products section that will be displayed
+// in the products modal when the user clicks on the products button
+
+function renderProducts() {
+
+    let html = `
+
+        <h2>Our Products</h2>
+
+        <div class="modal-products-grid">
+
+    `;
+
+    productsData.forEach(product => {
+
+        const statusHTML = product.ready
+
+            ? `<span class="status ready">✅ Ready / Launched</span>`
+
+            : `<span class="status coming">Coming Soon</span>`;
+
+
+        html += `
+
+            <div class="product-card-modal ${product.ready ? 'ready' : ''}">
+
+                <h3>${product.name}</h3>
+
+                <p>${product.description}</p>
+
+                <img src="${product.logo}" alt="${product.name} logo" width="100" height="100">
+
+                ${statusHTML}
+
+            </div>
+
+        `;
+
+    });
+
+    html += `</div>`;
+
+    return html;
+}
+
+// the render function for the roadmap section that will be displayed
+// in the roadmap modal when the user clicks on the roadmap button
+
+function renderRoadmap() {
+
+    let html = `
+
+        <h2>Roadmap</h2>
+
+        <ul class="roadmap-list">
+
+    `;
+
+    roadmapData.forEach(item => {
+
+        const statusHTML = item.ready
+
+            ? `<span class="status ready">✅ Done</span>`
+
+            : `<span class="status coming">In Progress</span>`;
+
+
+        html += `
+
+            <li>
+
+                <strong>${item.quarter}</strong> — ${item.desc}
+
+                ${statusHTML}
+
+            </li>
+
+        `;
+
+    });
+
+    html += `</ul>`;
+
+    return html;
+
+}
+
+// adding the modal contents together in an object that can be easily
+// accessed when the user clicks on the corresponding button
 
 const contents = {
 
@@ -35,107 +176,13 @@ const contents = {
 
         <p>Passionate about technology and solving real problems, DavidCaleb is building ByteHaven as a complete ecosystem that empowers users and creates lasting value across Africa.</p>
 
-    `,
-
-    products: `
-
-        <h2>Our Products</h2>
-
-        <div class="modal-products-grid">
-
-            <div class="product-card-modal">
-
-                <h3>HavenSocial</h3>
-
-                <p>Next-generation social platform powered by PMK.</p>
-
-                <img src="images/havensocial_logo.webp" alt="HavenSocial logo" width="100" height="100">
-
-            </div>
-
-            <div class="product-card-modal">
-
-                <h3>KelSwap</h3>
-
-                <p>Internal DEX for seamless PMK ↔ SOL swaps.</p>
-
-                <img src="images/kelswap_logo.webp" alt="KelSwap logo" width="100" height="100">
-
-            </div>
-
-            <div class="product-card-modal">
-
-                <h3>HavenChat</h3>
-
-                <p>Secure messaging platform.</p>
-
-                <img src="images/havenchat_logo.webp" alt="HavenChat logo" width="100" height="100">
-
-            </div>
-
-            <div class="product-card-modal">
-
-                <h3>HavenPlay</h3>
-
-                <p>A Social Video/Audio Platform.</p>
-
-                <img src="images/havenplay_logo.webp" alt="HavenPlay logo" width="100" height="100">
-
-            </div>
-
-            <div class="product-card-modal">
-
-                <h3>HavenBook</h3>
-
-                <p>A Hotel/Flight booking platform.</p>
-
-                <img src="images/havenbook_logo.webp" alt="HavenBook logo" width="100" height="100">
-
-            </div>
-
-            <div class="product-card-modal">
-
-                <h3>HavenConverter</h3>
-
-                <p>A multimedia file converter.</p>
-
-                <img src="images/havenConverter_logo.webp" alt="HavenConverter logo" width="100" height="100">
-
-            </div>
-
-            <div class="product-card-modal">
-
-                <h3>Promke (PMK) token</h3>
-
-                <p>Our official utility token.</p>
-
-                <img src="images/pmk_logo.webp" alt="PMK logo" width="100" height="100">
-
-            </div>
-
-        </div>
+        <img src="images/founder.webp" alt="DavidCaleb Uchechukwu Osigwe" width="200" height="200">
 
     `,
 
-    roadmap: `
+    products: renderProducts(),
 
-        <h2>Roadmap</h2>
-
-        <ul class="roadmap-list">
-
-            <li><strong>Q3 2026</strong> — PMK Token Launch + Internal Testing + KelSwap</li>
-
-            <li><strong>Q4 2026</strong> — Beta launch of HavenSocial</li>
-
-            <li><strong>Q4 2026</strong> — Beta launch of HavenChat</li>
-
-            <li><strong>Q4 2027</strong> — Public Mainnet + DEX/CEX listings</li>
-
-            <li><strong>Coming Soon!</strong> — Other Products will be updated later</li>
-
-        </ul>
-
-    `,
+    roadmap: renderRoadmap(),
 
     contact: `
 
@@ -152,19 +199,21 @@ const contents = {
     `
 };
     
+// ====================== MODAL INITIALIZER ======================
 export function initModals() {
-    
-    const modal = document.qs(`.modal`);
 
-    const modalBody = document.qs(`#modal-body`);
+    const modal = document.querySelector('#info-modal'); 
+           // ← your dialog
+    const modalBody = document.querySelector('#modal-body');
 
-    const closeModal = document.qs(`#close-modal`);
+    const closeBtn = document.querySelector('#close-modal');
 
     if (!modal || !modalBody || !closeBtn) {
 
-        console.warn('Modal elements not found');
+        console.error('Modal elements not found. Make sure you have <dialog id="info-modal"> in HTML');
 
         return;
+
     }
 
     function openModal(type) {
@@ -179,23 +228,33 @@ export function initModals() {
 
     }
 
-    // Navigation links
+    // Button listeners (your filterButtons + footer buttons)
 
-    document.querySelectorAll('a[data-modal]').forEach(link => {
+    const buttons = {
 
-        link.addEventListener('click', (e) => {
+        about: document.getElementById('about'),
 
-            e.preventDefault();
+        founder: document.getElementById('founder'),
 
-            const type = link.getAttribute('data-modal');
+        products: document.getElementById('products'),
 
-            openModal(type);
+        roadmap: document.getElementById('roadmap'),
 
-        });
+        contact: document.getElementById('contact')
+
+    };
+
+    Object.keys(buttons).forEach(key => {
+
+        if (buttons[key]) {
+
+            buttons[key].addEventListener('click', () => openModal(key));
+
+        }
 
     });
 
-    // Hero button
+    // Hero "Explore Our Products" button
 
     const exploreBtn = document.getElementById('explore-btn');
 
@@ -206,12 +265,15 @@ export function initModals() {
     }
 
     // Close modal
-    closeModal.addEventListener('click', () => modal.close());
+
+    closeBtn.addEventListener('click', () => modal.close());
 
     modal.addEventListener('click', (e) => {
 
         if (e.target === modal) modal.close();
+
     });
 
-    console.log('✅ Modals initialized successfully');
+    console.log('✅ Modals initialized with dynamic products + roadmap');
+    
 }
