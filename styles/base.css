@@ -38,30 +38,30 @@ body {
     overflow-x: hidden;
 
     &::before {
-        
+
         content: '';
-        
+
         position: fixed;
-        
+
         inset: 0;
-        
+
         background: linear-gradient(135deg,
-        
+
                 #0a0a0a 0%,
                 #1a1a2e 30%,
                 #0f172a 60%,
                 #1e2937 100%);
-                
+
         background-size: 400% 400%;
-        
+
         animation: gradientShift 30s ease infinite;
-        
+
         z-index: -1;
-        
+
         opacity: 0.97;
-        
+
     }
-    
+
 }
 
 h1,
@@ -105,5 +105,103 @@ header {
     z-index: 1000;
 
     border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+
+    img {
+
+        height: 36px;
+
+    }
+
+    span {
+
+        font-size: 1rem;
+
+        font-weight: 700;
+
+        color: var(--emerald);
+
+    }
+
+}
+
+/* Theme Toggle */
+
+.theme-toggle {
+
+    background: none;
+
+    border: none;
+
+    font-size: 1.8rem;
+
+    cursor: pointer;
+
+    color: var(--emerald);
+
+}
+
+/* Hero Section */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 0 5%;
+
+    .hero-content {
+
+        max-width: 850px;
+
+        margin: 0 auto;
+
+        .hero-logo {
+
+            height: 130px;
+
+            margin-bottom: 2rem;
+
+            filter: drop-shadow(0 0 35px rgba(16, 185, 129, 0.5));
+
+        }
+
+        h1 {
+
+            font-size: 2rem;
+
+            line-height: 1.1;
+
+            margin-bottom: 1rem;
+
+        }
+
+        .tagline {
+
+            font-size: 1.65rem;
+
+            color: var(--emerald);
+
+            margin-bottom: 1.5rem;
+
+        }
+
+        .description {
+
+            font-size: 1.25rem;
+
+            color: var(--text-muted);
+
+            max-width: 650px;
+
+            margin: 0 auto 2.8rem;
+
+        }
+
+    }
 
 }
