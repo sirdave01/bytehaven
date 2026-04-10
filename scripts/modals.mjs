@@ -43,7 +43,7 @@ const productsData = [
         name: 'HavenConverter',
         description: 'A multimedia file converter.',
         logo: 'images/havenconverter_logo.webp',
-            ready: false
+        ready: false
     },
     {
         name: 'Promkel (PMK) token',
