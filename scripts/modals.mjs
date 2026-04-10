@@ -42,7 +42,7 @@ const productsData = [
     {
         name: 'HavenConverter',
         description: 'A multimedia file converter.',
-        logo: 'images/havenConverter_logo.webp',
+        logo: 'images/havenconverter_logo.webp',
             ready: false
     },
     {
@@ -187,10 +187,42 @@ const contents = {
     contact: `
 
         <h2>Get In Touch</h2>
+    <p>We'd love to hear from you!</p>
 
-        <p>We'd love to hear from you!</p>
+    <form action="https://formsubmit.co/d08178084956@gmail.com" method="POST" class="contact-form">
+        
+        <input 
+            type="text" 
+            name="name" 
+            id="name"
+            placeholder="Your Full Name" 
+            autocomplete="name"
+            required>
+        
+        <input 
+            type="email" 
+            name="email" 
+            id="email"
+            placeholder="Your Email Address" 
+            autocomplete="email"
+            required>
+        
+        <textarea 
+            name="message" 
+            id="message"
+            rows="6" 
+            placeholder="Your message, question or idea..." 
+            autocomplete="off"
+            required></textarea>
 
-        <p><strong>Email:</strong> <a href="mailto:d08178084956@gmail.com">d08178084956@gmail.com</a></p>
+        <!-- Hidden fields -->
+        <input type="hidden" name="_next" value="https://bytehaven.world/#contact">
+        <input type="hidden" name="_subject" value="New Inquiry from ByteHaven Website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">   <!-- makes email look nicer -->
+
+        <button type="submit" class="btn-primary">Send Message</button>
+    </form>
 
         <p><strong>WhatsApp:</strong> <a href="https://wa.me/+2349035677967" target="_blank">+234 903 567 7967</a></p>
 
@@ -275,5 +307,5 @@ export function initModals() {
     });
 
     console.log('✅ Modals initialized with dynamic products + roadmap');
-    
+
 }
