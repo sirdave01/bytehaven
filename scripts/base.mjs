@@ -6,8 +6,6 @@ import { initCrypto } from "./cryptoexchangerate.mjs";
 
 import { initDarkMode } from "./modetoggle.mjs";
 
-import { initWeather } from "./weatherforecast.mjs";
-
 import { initHamburger } from "./hambutton.mjs";
 
 import { initFooterDate } from "./footer.mjs";
@@ -19,7 +17,6 @@ document.addEventListener(`DOMContentLoaded`, () => {
     initLiveClock();
     initCrypto();
     initDarkMode();
-    initWeather();
     initHamburger();
     initFooterDate();
     initModals();

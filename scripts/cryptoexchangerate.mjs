@@ -116,7 +116,10 @@ export async function initCrypto() {
         const rate = await fetch(`https://v6.exchangerate-api.com/v6/${EXCHANGE_RATE_KEY}/latest/USD`)
             .then(r => r.json());
 
-        const currencies = { NGN: '₦', EUR: '€', GBP: '£', KWD: 'د.ك', CAD: 'C$', JPY: '¥' };
+        const currencies = {
+            NGN: '₦', EUR: '€', GBP: '£', KWD: 'د.ك', CAD: 'C$', JPY: '¥', GHS: '₵', ZAR: 'R', AUD: 'A$', CHF: 'CHF', CNY: '¥', INR: '₹', BRL: 'R$', MXN: '$', IDR: 'Rp', RUB: '₽', KRW: '₩', TRY: '₺', SAR: '﷼',
+            AED: 'د.إ', QAR: '﷼', EGP: '£', VND: '₫'
+        };
         let html = '<h3>Live Exchange Rates</h3><div class="rates-grid">';
         for (const [code, symbol] of Object.entries(currencies)) {
             const value = rate.conversion_rates[code];
