@@ -54,7 +54,7 @@ const productsData = [
 ];
 
 const roadmapData = [
-    { quarter: 'Q3 2026', desc: 'HBT Token Launch + Internal Testing + KelSwap', ready: false },
+    { quarter: 'Q3 2026', desc: 'HBT Token Launch + Internal Testing + HavenSwap', ready: false },
     { quarter: 'Q4 2026', desc: 'Beta launch of HavenSocial', ready: false },
     { quarter: '2027', desc: 'Beta launch of HavenChat', ready: false },
     { quarter: '2027', desc: 'Public Mainnet + DEX/CEX listings', ready: false },
