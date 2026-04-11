@@ -16,9 +16,9 @@ const productsData = [
         ready: false
     },
     {
-        name: 'KelSwap',
+        name: 'HavenSwap',
         description: 'Internal DEX for seamless PMK ↔ SOL swaps.',
-        logo: 'images/kelswap_logo.webp',
+        logo: 'images/havenswap.webp',
         ready: false
     },
     {
