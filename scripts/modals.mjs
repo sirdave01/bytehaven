@@ -46,9 +46,9 @@ const productsData = [
         ready: false
     },
     {
-        name: 'Promkel (PMK) token',
+        name: 'HavenByte (HBT) token',
         description: 'Our official utility token.',
-        logo: 'images/pmk_logo.webp',
+        logo: 'images/havenbytelogo.webp',
         ready: false
     }
 ];
