@@ -11,13 +11,13 @@
 const productsData = [
     {
         name: 'HavenSocial',
-        description: 'Next-generation social platform powered by PMK.',
+        description: 'Next-generation social platform powered by HBT.',
         logo: 'images/havensocial_logo.webp',
         ready: false
     },
     {
         name: 'HavenSwap',
-        description: 'Internal DEX for seamless PMK ↔ SOL swaps.',
+        description: 'Internal DEX for seamless HBT ↔ SOL swaps.',
         logo: 'images/havenswap.webp',
         ready: false
     },
@@ -54,7 +54,7 @@ const productsData = [
 ];
 
 const roadmapData = [
-    { quarter: 'Q3 2026', desc: 'PMK Token Launch + Internal Testing + KelSwap', ready: false },
+    { quarter: 'Q3 2026', desc: 'HBT Token Launch + Internal Testing + KelSwap', ready: false },
     { quarter: 'Q4 2026', desc: 'Beta launch of HavenSocial', ready: false },
     { quarter: '2027', desc: 'Beta launch of HavenChat', ready: false },
     { quarter: '2027', desc: 'Public Mainnet + DEX/CEX listings', ready: false },
@@ -160,7 +160,7 @@ const contents = {
 
         <h2>About ByteHaven</h2>
 
-        <p>ByteHaven Tech Solutions Ltd is a Nigerian technology company building a full digital ecosystem — social platforms, messaging, and more — all powered by our official utility token, <strong>Promkel (PMK)</strong>.</p>
+        <p>ByteHaven Tech Solutions Ltd is a Nigerian technology company building a full digital ecosystem — social platforms, messaging, and more — all powered by our official utility token, <strong>HavenByte (HBT)</strong>.</p>
            
         <p>Our goal is to create real utility, sustainable revenue, and long-term value for Africa.</p>
 
