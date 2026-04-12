@@ -10,6 +10,15 @@ import { initFooterDate } from "./footer.mjs";
 
 import { initModals } from "./modals.mjs";
 
+import { organizationSchema } from "./schema.mjs";
+
+function injectSchema() {
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(organizationSchema);
+  document.head.appendChild(script);
+}
+
 // event listener to load the initThankYou function when the DOM content is fully loaded
 document.addEventListener(`DOMContentLoaded`, () => {
     initLiveClock();
@@ -17,4 +26,5 @@ document.addEventListener(`DOMContentLoaded`, () => {
     initDarkMode();
     initFooterDate();
     initModals();
+    injectSchema();
 });
