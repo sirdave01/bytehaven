@@ -13,6 +13,7 @@ const productsData = [
         name: 'HavenSocial',
         description: 'Next-generation social platform powered by HBT.',
         logo: 'images/havensocial_logo.webp',
+        link: 'https://havensocial.bytehaven.world/',
         ready: false
     },
     {
@@ -89,6 +90,10 @@ function renderProducts() {
         html += `
 
             <div class="product-card-modal ${product.ready ? 'ready' : ''}">
+
+                <a href="${product.link}" target="_blank" rel="noopener">
+                    <img src="${product.logo}" alt="${product.name} logo" width="100" height="100">
+                </a>
 
                 <h3>${product.name}</h3>
 
