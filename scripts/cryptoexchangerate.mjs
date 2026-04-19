@@ -117,8 +117,37 @@ export async function initCrypto() {
             .then(r => r.json());
 
         const currencies = {
-            NGN: '₦', EUR: '€', GBP: '£', KWD: 'د.ك', CAD: 'C$', JPY: '¥', GHS: '₵', ZAR: 'R', AUD: 'A$', CHF: 'CHF', CNY: '¥', INR: '₹', BRL: 'R$', MXN: '$', IDR: 'Rp', RUB: '₽', KRW: '₩', TRY: '₺', SAR: '﷼',
-            AED: 'د.إ', QAR: '﷼', EGP: '£', VND: '₫'
+            // African Currencies (Priority)
+            NGN: '₦',     // Nigeria
+            GHS: '₵',     // Ghana
+            ZAR: 'R',     // South Africa
+            KES: 'KSh',   // Kenya
+            EGP: '£',     // Egypt
+            XOF: 'CFA',   // West African CFA (Senegal, Ivory Coast, etc.)
+            XAF: 'CFA',   // Central African CFA
+            ETB: 'Br',    // Ethiopia
+            UGX: 'USh',   // Uganda
+            TZS: 'TSh',   // Tanzania
+            MAD: 'DH',    // Morocco
+            DZD: 'DA',    // Algeria
+
+            // Major Global Currencies
+            USD: '$',
+            EUR: '€',
+            GBP: '£',
+            CAD: 'C$',
+            AUD: 'A$',
+            JPY: '¥',
+            CNY: '¥',
+            INR: '₹',
+            BRL: 'R$',
+            MXN: '$',
+            RUB: '₽',
+            KRW: '₩',
+            TRY: '₺',
+            SAR: '﷼',
+            AED: 'د.إ',
+            QAR: '﷼',
         };
         let html = '<h3>Live Exchange Rates</h3><div class="rates-grid">';
         for (const [code, symbol] of Object.entries(currencies)) {
