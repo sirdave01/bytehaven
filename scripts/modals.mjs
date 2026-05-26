@@ -17,12 +17,6 @@ const productsData = [
         ready: false
     },
     {
-        name: 'HavenSwap',
-        description: 'Internal DEX for seamless HBT ↔ SOL swaps.',
-        logo: 'images/havenswap.webp',
-        ready: false
-    },
-    {
         name: 'HavenChat',
         description: 'Secure messaging platform.',
         logo: 'images/havenchat_logo.webp',
@@ -55,13 +49,13 @@ const productsData = [
 ];
 
 const roadmapData = [
-    { quarter: 'Q3 2026', desc: 'HBT Token Launch + Internal Testing + HavenSwap', ready: false },
+    { quarter: 'Q3 2026', desc: 'HBT Token Launch', ready: false },
     { quarter: 'Q4 2026', desc: 'Beta launch of HavenSocial', ready: false },
     { quarter: '2027', desc: 'Beta launch of HavenChat', ready: false },
     { quarter: '2027', desc: 'Public Mainnet + DEX/CEX listings', ready: false },
     {quarter: '2028', desc: 'Beta launch of HavenPlay', ready: false },
     {quarter: '2028', desc: 'Beta launch of HavenBook', ready: false },
-    { quarter: 'Q4 2026', desc: 'Beta launch of HavenConverter', ready: false },
+    { quarter: 'Q4 2027', desc: 'Beta launch of HavenConverter', ready: false },
     { quarter: 'Coming Soon!', desc: 'Other Products will be updated later', ready: false }
 ];
 
@@ -98,8 +92,6 @@ function renderProducts() {
                 <h3>${product.name}</h3>
 
                 <p>${product.description}</p>
-
-                <img src="${product.logo}" alt="${product.name} logo" width="100" height="100">
 
                 ${statusHTML}
 
