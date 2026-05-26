@@ -44,6 +44,7 @@ const productsData = [
         name: 'HavenByte (HBT) token',
         description: 'Our official utility token.',
         logo: 'images/havenbytelogo.webp',
+        link: 'https://havenbyte.bytehaven.world',
         ready: false
     }
 ];
