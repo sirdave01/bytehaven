@@ -20,24 +20,28 @@ const productsData = [
         name: 'HavenChat',
         description: 'Secure messaging platform.',
         logo: 'images/havenchat_logo.webp',
+        // link: 'https://havenchat.bytehaven.world',
         ready: false
     },
     {
         name: 'HavenPlay',
         description: 'A Social Video/Audio Platform.',
         logo: 'images/havenplay_logo.webp',
+        // link: 'https://havenplay.bytehaven.world',
         ready: false
     },
     {
         name: 'HavenBook',
         description: 'A Hotel/Flight booking platform.',
         logo: 'images/havenbook_logo.webp',
+        // link: 'https://havenbook.bytehaven.world',
         ready: false
     },
     {
         name: 'HavenConverter',
         description: 'A multimedia file converter.',
         logo: 'images/havenconverter_logo.webp',
+        // link: 'https://havenconverter.bytehaven.world',
         ready: false
     },
     {
