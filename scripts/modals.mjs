@@ -49,12 +49,12 @@ const productsData = [
         description: 'Our official utility token.',
         logo: 'images/havenbytelogo.webp',
         link: 'https://havenbyte.bytehaven.world',
-        ready: false
+        ready: true
     }
 ];
 
 const roadmapData = [
-    { quarter: 'Q3 2026', desc: 'HBT Token Launch', ready: false },
+    { quarter: 'Q3 2026', desc: 'HBT Token Launch', ready: true },
     { quarter: 'Q4 2026', desc: 'Beta launch of HavenSocial', ready: false },
     { quarter: '2027', desc: 'Beta launch of HavenChat', ready: false },
     { quarter: '2027', desc: 'Public Mainnet + DEX/CEX listings', ready: false },
