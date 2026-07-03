@@ -11,7 +11,7 @@
 const productsData = [
     {
         name: 'HavenSocial',
-        description: 'Next-generation social platform powered by HBT.',
+        description: 'Next-generation SocialFi platform powered by the HavenByte (HBT) utility token.',
         logo: 'images/havensocial_logo.webp',
         link: 'https://havensocial.bytehaven.world/',
         ready: false
@@ -49,7 +49,8 @@ const productsData = [
         description: 'Our official utility token.',
         logo: 'images/havenbytelogo.webp',
         link: 'https://havenbyte.bytehaven.world',
-        ready: true
+        ready: true,
+        whitepaper: 'https://havenbyte.bytehaven.world/whitepaper/HavenByte_Token_Whitepaper.pdf'
     }
 ];
 
@@ -99,6 +100,14 @@ function renderProducts() {
                 <p>${product.description}</p>
 
                 ${statusHTML}
+
+                ${product.whitepaper ? `
+                    <a href="${product.whitepaper}" 
+                    target="_blank" 
+                    class="whitepaper-link">
+                    📄 View Whitepaper
+                    </a>
+                ` : ''}
 
             </div>
 
