@@ -9,6 +9,14 @@
 //     and also have a contact section that will allow users to get in touch with us if they have any questions or ideas.
 
 const productsData = [
+
+    {
+        name: 'BHID',
+        description: 'The centralized authentication and identity service being developed for the ByteHaven ecosystem and other third-party applications',
+        logo: 'images/bhid.png',
+        link: 'https://auth.bytehaven.world/',
+        ready: true
+    },
     {
         name: 'HavenSocial',
         description: 'Next-generation SocialFi platform powered by the HavenByte (HBT) utility token.',
