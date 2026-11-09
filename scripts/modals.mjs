@@ -22,7 +22,7 @@ const productsData = [
         description: 'Next-generation SocialFi platform powered by the HavenByte (HBT) utility token.',
         logo: 'images/havensocial_logo.webp',
         link: 'https://havensocial.bytehaven.world/',
-        ready: false
+        ready: true
     },
     {
         name: 'HavenChat',
